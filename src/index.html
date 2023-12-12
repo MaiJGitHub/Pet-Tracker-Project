@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src= "index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        img { height: 15rem; }
+        sup { color: red; }
+        form, ul { display: flex; gap: 1rem; padding: 1rem; border: 0.1rem solid #000; }
+        form { flex-direction: column; width: fit-content; }
+        #pet-list { flex-wrap: wrap; list-style: none; }
+      </style>
+</head>
+<body>
+    <h1>Pet Tracker</h1>
+    <main>
+        <form>
+            <h2>Add a new Pet!</h2>
+            <label for="name">Pet Name:</label>
+            <input type="text" name="name" id="name">
+            <label for="profilePic">Profile Picture:</label>
+            <input type="text" name="profilePic" id="profilePic" placeholder="Picture URL">
+            <fieldset>
+                <legend>Species</legend>
+                <input type="radio" name="species" id="dog" value="dog">
+                <label for="dog">Dog</label>
+                <input type="radio" name="species" id="cat" value="cat">
+                <label for="cat">Cat</label>
+                <input type="radio" name="species" id="bird" value="bird">
+                <label for="bird">Bird</label>
+            </fieldset>
+            <input type="checkbox" id="isFriendly" name="isFriendly">
+            <label for="isFriendly">Are They Friendly?</label>
+            <button>Add Pet!</button>
+        </form>
+        <section>
+            <h2>Pet List</h2>
+
+        </section>
+    </main>
+</body>
+</html>
