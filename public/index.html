@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src= "index.js"></script>
+    <script defer src="./scripts.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
         img { height: 15rem; }
@@ -19,27 +19,33 @@
     <main>
         <form>
             <h2>Add a new Pet!</h2>
-            <label for="name">Pet Name:</label>
-            <input type="text" name="name" id="name">
-            <label for="profilePic">Profile Picture:</label>
-            <input type="text" name="profilePic" id="profilePic" placeholder="Picture URL">
-            <fieldset>
-                <legend>Species</legend>
-                <input type="radio" name="species" id="dog" value="dog">
+
+            <label for="name">Pet Name<sup>*</sup>:</label>
+            <input type="text" name="name"id="pet-name">
+
+            <label for="profilePic">Profile Picture<sup>*</sup>:</label>
+            <input type="text" name="profilePic" id="profile-pic" placeholder="Picture URL">
+
+            <fieldset id="species">
+                <legend>Species<sup>*</sup>:</legend>
+                <input type="radio" name="species" id="dog" value="dog" required>
                 <label for="dog">Dog</label>
-                <input type="radio" name="species" id="cat" value="cat">
+                <input type="radio" name="species" id="cat" value="cat" required>
                 <label for="cat">Cat</label>
-                <input type="radio" name="species" id="bird" value="bird">
+                <input type="radio" name="species" id="bird" value="bird" required>
                 <label for="bird">Bird</label>
             </fieldset>
-            <input type="checkbox" id="isFriendly" name="isFriendly">
-            <label for="isFriendly">Are They Friendly?</label>
-            <button>Add Pet!</button>
-        </form>
-        <section>
-            <h2>Pet List</h2>
 
-        </section>
+            <input type="checkbox" id="is-friendly" name="isFriendly">
+            <label for="isFriendly">Are They Friendly?</label>
+
+            <button type="submit" id="add-pet-btn">Add Pet!</button>
+        </form>
+
+            <h2>Pet List</h2>
+            <ul id="pet-list">
+
+            </ul>
     </main>
 </body>
 </html>

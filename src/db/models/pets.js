@@ -1,10 +1,10 @@
 const knex = require('./knex');
 
 class Pets {
-  static async createNewPet(petname, profilepicture, species, isFriendly) {
+  static async createNewPet({petname, profilepicture, species, isfriendly}) {
     try {
-      const query = `INSERT INTO pets (petname, profilepicture, species, isFriendly) values (?, ?, ?, ?) returning *`;
-      const res = await knex.raw(query, [petname, profilepicture, species, isFriendly]);
+      const query = `INSERT INTO pets (petname, profilepicture, species, isfriendly) values (?, ?, ?, ?) returning *`;
+      const res = await knex.raw(query, [petname, profilepicture, species, isfriendly]);
 
       return res.rows;
 

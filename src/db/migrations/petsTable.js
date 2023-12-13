@@ -10,7 +10,7 @@ exports.up = function (knex) {
       table.string('petname'); // text
       table.string('profilepicture');
       table.string('species');
-      table.boolean('isFriendly').defaultTo(false); // boolean, optional default
+      table.boolean('isfriendly'); // boolean, optional default
   
       /* add a foreign key that links to a hypothetical users table */
       // You must first have created a users table with a key called id!

@@ -9,4 +9,13 @@ exports.seed = async (knex) => {
     // Deletes ALL existing entries (you can just use knex and delete everything)
     await knex('pets').del();
     // Now run your logic to create your resources with your models
+
+    await knex.table('pets').insert([
+      {
+        "petname": "bob",
+        "profilepicture": "aDog",
+        "species": "dog",
+        "isfriendly": true
+      }
+    ])
   };
