@@ -1,5 +1,3 @@
-const { all } = require("../routes");
-
 const listPets = async (req, res) => {
     try {
         const allPets = await req.Pets.getAllPets();
